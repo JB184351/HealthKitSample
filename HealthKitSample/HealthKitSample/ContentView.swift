@@ -49,6 +49,7 @@ struct ContentView: View {
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
+                            .padding(.bottom, 12)
                         
                         RoundedRectangle(cornerRadius: 12)
                             .foregroundStyle(.secondary)
