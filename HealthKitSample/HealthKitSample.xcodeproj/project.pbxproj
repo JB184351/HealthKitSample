@@ -11,6 +11,7 @@
 		300DFFF12C1A53DA00B8946E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DFFF02C1A53DA00B8946E /* DashboardView.swift */; };
 		300DFFF32C1A53DC00B8946E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300DFFF22C1A53DC00B8946E /* Assets.xcassets */; };
 		300DFFF62C1A53DC00B8946E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300DFFF52C1A53DC00B8946E /* Preview Assets.xcassets */; };
+		307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */; };
 		309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309854152C1CECA60009E31D /* HealthDataListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		300DFFF02C1A53DA00B8946E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		300DFFF22C1A53DC00B8946E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300DFFF52C1A53DC00B8946E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		309854152C1CECA60009E31D /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +58,7 @@
 				300DFFEE2C1A53DA00B8946E /* HealthKitSampleApp.swift */,
 				300DFFF02C1A53DA00B8946E /* DashboardView.swift */,
 				309854152C1CECA60009E31D /* HealthDataListView.swift */,
+				307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */,
 				300DFFF22C1A53DC00B8946E /* Assets.xcassets */,
 				300DFFF42C1A53DC00B8946E /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */,
 				300DFFF12C1A53DA00B8946E /* DashboardView.swift in Sources */,
 				300DFFEF2C1A53DA00B8946E /* HealthKitSampleApp.swift in Sources */,
+				307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
