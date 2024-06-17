@@ -11,6 +11,8 @@
 		300DFFF12C1A53DA00B8946E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DFFF02C1A53DA00B8946E /* DashboardView.swift */; };
 		300DFFF32C1A53DC00B8946E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300DFFF22C1A53DC00B8946E /* Assets.xcassets */; };
 		300DFFF62C1A53DC00B8946E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 300DFFF52C1A53DC00B8946E /* Preview Assets.xcassets */; };
+		307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */; };
+		307D81E92C20C8F900B81607 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E82C20C8F900B81607 /* HealthKitManager.swift */; };
 		309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309854152C1CECA60009E31D /* HealthDataListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +22,9 @@
 		300DFFF02C1A53DA00B8946E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		300DFFF22C1A53DC00B8946E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		300DFFF52C1A53DC00B8946E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
+		307D81E72C20C79700B81607 /* HealthKitSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitSample.entitlements; sourceTree = "<group>"; };
+		307D81E82C20C8F900B81607 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		309854152C1CECA60009E31D /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,9 +58,12 @@
 		300DFFED2C1A53DA00B8946E /* HealthKitSample */ = {
 			isa = PBXGroup;
 			children = (
+				307D81E82C20C8F900B81607 /* HealthKitManager.swift */,
+				307D81E72C20C79700B81607 /* HealthKitSample.entitlements */,
 				300DFFEE2C1A53DA00B8946E /* HealthKitSampleApp.swift */,
 				300DFFF02C1A53DA00B8946E /* DashboardView.swift */,
 				309854152C1CECA60009E31D /* HealthDataListView.swift */,
+				307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */,
 				300DFFF22C1A53DC00B8946E /* Assets.xcassets */,
 				300DFFF42C1A53DC00B8946E /* Preview Content */,
 			);
@@ -143,6 +151,8 @@
 				309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */,
 				300DFFF12C1A53DA00B8946E /* DashboardView.swift in Sources */,
 				300DFFEF2C1A53DA00B8946E /* HealthKitSampleApp.swift in Sources */,
+				307D81E92C20C8F900B81607 /* HealthKitManager.swift in Sources */,
+				307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -258,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -273,12 +283,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitSample/HealthKitSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitSample/Preview Content\"";
 				DEVELOPMENT_TEAM = H9AZCNDQS4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "The app shows your step and weight data in an interactive chart.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "The app allows you to add step and weight data to Apple Health.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,12 +315,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitSample/HealthKitSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitSample/Preview Content\"";
 				DEVELOPMENT_TEAM = H9AZCNDQS4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "The app shows your step and weight data in an interactive chart.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "The app allows you to add step and weight data to Apple Health.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
