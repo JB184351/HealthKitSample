@@ -19,6 +19,7 @@
 		307D81F52C223B0800B81607 /* ChartDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81F42C223B0800B81607 /* ChartDataTypes.swift */; };
 		307D81F82C223B8300B81607 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81F72C223B8300B81607 /* DateExtension.swift */; };
 		307D81FB2C223D0300B81607 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 307D81FA2C223D0300B81607 /* Algorithms */; };
+		307D81FD2C223F5E00B81607 /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81FC2C223F5E00B81607 /* StepPieChart.swift */; };
 		309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309854152C1CECA60009E31D /* HealthDataListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		307D81F22C223AEB00B81607 /* ChartMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMath.swift; sourceTree = "<group>"; };
 		307D81F42C223B0800B81607 /* ChartDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataTypes.swift; sourceTree = "<group>"; };
 		307D81F72C223B8300B81607 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		307D81FC2C223F5E00B81607 /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 		309854152C1CECA60009E31D /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				307D81EC2C221C9B00B81607 /* StepBarChartView.swift */,
 				307D81F22C223AEB00B81607 /* ChartMath.swift */,
 				307D81F42C223B0800B81607 /* ChartDataTypes.swift */,
+				307D81FC2C223F5E00B81607 /* StepPieChart.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */,
 				307D81F32C223AEB00B81607 /* ChartMath.swift in Sources */,
 				307D81EB2C2208AA00B81607 /* HealthMetric.swift in Sources */,
+				307D81FD2C223F5E00B81607 /* StepPieChart.swift in Sources */,
 				307D81F52C223B0800B81607 /* ChartDataTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
