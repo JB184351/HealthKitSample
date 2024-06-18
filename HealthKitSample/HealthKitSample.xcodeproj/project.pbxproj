@@ -14,6 +14,7 @@
 		307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */; };
 		307D81E92C20C8F900B81607 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E82C20C8F900B81607 /* HealthKitManager.swift */; };
 		307D81EB2C2208AA00B81607 /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81EA2C2208AA00B81607 /* HealthMetric.swift */; };
+		307D81ED2C221C9B00B81607 /* StepBarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81EC2C221C9B00B81607 /* StepBarChartView.swift */; };
 		309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309854152C1CECA60009E31D /* HealthDataListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		307D81E72C20C79700B81607 /* HealthKitSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitSample.entitlements; sourceTree = "<group>"; };
 		307D81E82C20C8F900B81607 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		307D81EA2C2208AA00B81607 /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
+		307D81EC2C221C9B00B81607 /* StepBarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarChartView.swift; sourceTree = "<group>"; };
 		309854152C1CECA60009E31D /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,13 +62,12 @@
 		300DFFED2C1A53DA00B8946E /* HealthKitSample */ = {
 			isa = PBXGroup;
 			children = (
-				307D81E82C20C8F900B81607 /* HealthKitManager.swift */,
 				307D81E72C20C79700B81607 /* HealthKitSample.entitlements */,
 				300DFFEE2C1A53DA00B8946E /* HealthKitSampleApp.swift */,
-				300DFFF02C1A53DA00B8946E /* DashboardView.swift */,
-				307D81EA2C2208AA00B81607 /* HealthMetric.swift */,
-				309854152C1CECA60009E31D /* HealthDataListView.swift */,
-				307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */,
+				307D81F12C221F5100B81607 /* Managers */,
+				307D81F02C221F4A00B81607 /* Model */,
+				307D81EF2C221F2A00B81607 /* Charts */,
+				307D81EE2C221F1300B81607 /* Screens */,
 				300DFFF22C1A53DC00B8946E /* Assets.xcassets */,
 				300DFFF42C1A53DC00B8946E /* Preview Content */,
 			);
@@ -79,6 +80,40 @@
 				300DFFF52C1A53DC00B8946E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		307D81EE2C221F1300B81607 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				300DFFF02C1A53DA00B8946E /* DashboardView.swift */,
+				309854152C1CECA60009E31D /* HealthDataListView.swift */,
+				307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		307D81EF2C221F2A00B81607 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				307D81EC2C221C9B00B81607 /* StepBarChartView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		307D81F02C221F4A00B81607 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				307D81EA2C2208AA00B81607 /* HealthMetric.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		307D81F12C221F5100B81607 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				307D81E82C20C8F900B81607 /* HealthKitManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +189,7 @@
 				309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */,
 				300DFFF12C1A53DA00B8946E /* DashboardView.swift in Sources */,
 				300DFFEF2C1A53DA00B8946E /* HealthKitSampleApp.swift in Sources */,
+				307D81ED2C221C9B00B81607 /* StepBarChartView.swift in Sources */,
 				307D81E92C20C8F900B81607 /* HealthKitManager.swift in Sources */,
 				307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */,
 				307D81EB2C2208AA00B81607 /* HealthMetric.swift in Sources */,
