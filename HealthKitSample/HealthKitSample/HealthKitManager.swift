@@ -27,9 +27,13 @@ import Observation
         let samplePredicate = HKSamplePredicate.quantitySample(type: HKQuantityType(.stepCount), predicate: queryPredicate)
         let stepsQuery = HKStatisticsCollectionQueryDescriptor(predicate: samplePredicate, options: .cumulativeSum, anchorDate: endDate, intervalComponents: .init(day: 1))
         
-        let stepcounts = try! await stepsQuery.result(for: store)
-        stepData = stepcounts.statistics().map {
-            .init(date: $0.startDate, value: $0.sumQuantity()?.doubleValue(for: .count()) ?? 0)
+        do {
+            let stepcounts = try await stepsQuery.result(for: store)
+            stepData = stepcounts.statistics().map {
+                .init(date: $0.startDate, value: $0.sumQuantity()?.doubleValue(for: .count()) ?? 0)
+            }
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
@@ -43,10 +47,13 @@ import Observation
         let samplePredicate = HKSamplePredicate.quantitySample(type: HKQuantityType(.bodyMass), predicate: queryPredicate)
         let weightQuery = HKStatisticsCollectionQueryDescriptor(predicate: samplePredicate, options: .mostRecent, anchorDate: endDate, intervalComponents: .init(day: 1))
         
-        let weights = try! await weightQuery.result(for: store)
-        
-        weightData = weights.statistics().map {
-            .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
+        do {
+            let weights = try await weightQuery.result(for: store)
+            weightData = weights.statistics().map {
+                .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
+            }
+        } catch {
+            print(error.localizedDescription)
         }
     }
     
