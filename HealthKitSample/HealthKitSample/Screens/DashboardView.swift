@@ -41,7 +41,7 @@ struct DashboardView: View {
                     }
                     .pickerStyle(.segmented)
                     
-                    StepBarChartView(selectedStat: selectedStat, chartData: hkManager.stepData)
+                    StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
                     StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
                 }
             }

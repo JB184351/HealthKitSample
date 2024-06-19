@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct StepBarChartView: View {
+struct StepBarChart: View {
     @State private var rawSelectedDate: Date?
     
     var selectedStat: HealthMetricContext
@@ -108,5 +108,5 @@ struct StepBarChartView: View {
 }
 
 #Preview {
-    StepBarChartView(selectedStat: .steps, chartData: HealthMetric.mockData)
+    StepBarChart(selectedStat: .steps, chartData: HealthMetric.mockData)
 }
