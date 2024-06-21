@@ -49,8 +49,6 @@ struct ChartMath {
             weekdayCharData.append(.init(date: firstValue.date, value: averageWeightDiffs))
         }
         
-        
-        
         return weekdayCharData
     }
 }
