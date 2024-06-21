@@ -28,7 +28,6 @@ struct WeightDiffBarChart: View {
                     Text("Per Weekday (Last 28 Days)")
                         .font(.caption)
                 }
-                
             }
             .foregroundStyle(.secondary)
             .padding(.bottom, 12)
