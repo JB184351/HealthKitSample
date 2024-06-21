@@ -19,17 +19,17 @@ struct WeightDiffBarChart: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Label("Average Weight Change", systemImage: "figure.walk")
-                            .font(.title3.bold())
-                            .foregroundStyle(.indigo)
-                        
-                        Text("Per Weekday (Last 28 Days)")
-                            .font(.caption)
-                    }
-
+            HStack {
+                VStack(alignment: .leading) {
+                    Label("Average Weight Change", systemImage: "figure.walk")
+                        .font(.title3.bold())
+                        .foregroundStyle(.indigo)
+                    
+                    Text("Per Weekday (Last 28 Days)")
+                        .font(.caption)
                 }
+                
+            }
             .foregroundStyle(.secondary)
             .padding(.bottom, 12)
             
@@ -82,8 +82,8 @@ struct WeightDiffBarChart: View {
         .padding(12)
         .background(
             RoundedRectangle(cornerRadius: 4)
-            .fill(Color(.secondarySystemBackground))
-            .shadow(color: .secondary.opacity(0.3), radius: 2, x: 2, y: 2)
+                .fill(Color(.secondarySystemBackground))
+                .shadow(color: .secondary.opacity(0.3), radius: 2, x: 2, y: 2)
         )
     }
 }
