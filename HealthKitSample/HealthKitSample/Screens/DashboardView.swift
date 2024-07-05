@@ -60,7 +60,7 @@ struct DashboardView: View {
                     try await hkManager.fetchWeights()
                     try await hkManager.fetchWeightsForDifferentials()
                 } catch STError.authNotDetermined {
-                    isShowingPermissionPrimingSheet = false
+                    isShowingPermissionPrimingSheet = true
                 } catch STError.noData {
                     fetchError = .noData
                     isShowingAlert = true
@@ -74,9 +74,9 @@ struct DashboardView: View {
                 HealthDataListView(metric: metric)
             }
             .sheet(isPresented: $isShowingPermissionPrimingSheet, onDismiss: {
-                
+               
             }, content: {
-                
+                HealthKitPermissionPrimingView()
             })
             .padding()
             .alert(isPresented: $isShowingAlert, error: fetchError) { fetchError in
