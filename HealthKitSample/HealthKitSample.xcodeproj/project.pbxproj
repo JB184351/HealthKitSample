@@ -24,6 +24,7 @@
 		307D81FB2C223D0300B81607 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 307D81FA2C223D0300B81607 /* Algorithms */; };
 		307D81FD2C223F5E00B81607 /* StepPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81FC2C223F5E00B81607 /* StepPieChart.swift */; };
 		309854162C1CECA60009E31D /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309854152C1CECA60009E31D /* HealthDataListView.swift */; };
+		30D7D32F2C39DA1D002D111B /* ChartEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7D32E2C39DA1D002D111B /* ChartEmptyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		307D81F72C223B8300B81607 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		307D81FC2C223F5E00B81607 /* StepPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPieChart.swift; sourceTree = "<group>"; };
 		309854152C1CECA60009E31D /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
+		30D7D32E2C39DA1D002D111B /* ChartEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartEmptyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				307D81EC2C221C9B00B81607 /* StepBarChart.swift */,
+				30D7D32E2C39DA1D002D111B /* ChartEmptyView.swift */,
 				3015D8112C24EF9D00C364D5 /* WeightDiffBarChart.swift */,
 				3015D80C2C23AD4500C364D5 /* WeightLineChart.swift */,
 				307D81F22C223AEB00B81607 /* ChartMath.swift */,
@@ -245,6 +248,7 @@
 				307D81FD2C223F5E00B81607 /* StepPieChart.swift in Sources */,
 				3015D80D2C23AD4500C364D5 /* WeightLineChart.swift in Sources */,
 				307D81F52C223B0800B81607 /* ChartDataTypes.swift in Sources */,
+				30D7D32F2C39DA1D002D111B /* ChartEmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
