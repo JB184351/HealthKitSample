@@ -15,6 +15,7 @@
 		3015D8102C23B05C00C364D5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015D80F2C23B05C00C364D5 /* MockData.swift */; };
 		3015D8122C24EF9D00C364D5 /* WeightDiffBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015D8112C24EF9D00C364D5 /* WeightDiffBarChart.swift */; };
 		302B7DC02C3C89C40057F9B6 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B7DBF2C3C89C40057F9B6 /* ChartContainer.swift */; };
+		3052BE8B2C487AB600ED93ED /* STError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052BE8A2C487AB600ED93ED /* STError.swift */; };
 		305D5A952C4092F400DAC0BE /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D5A942C4092F400DAC0BE /* ChartHelper.swift */; };
 		305D5A972C4095F800DAC0BE /* ChartAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D5A962C4095F800DAC0BE /* ChartAnnotationView.swift */; };
 		307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */; };
@@ -40,6 +41,7 @@
 		3015D80F2C23B05C00C364D5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		3015D8112C24EF9D00C364D5 /* WeightDiffBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDiffBarChart.swift; sourceTree = "<group>"; };
 		302B7DBF2C3C89C40057F9B6 /* ChartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
+		3052BE8A2C487AB600ED93ED /* STError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STError.swift; sourceTree = "<group>"; };
 		305D5A942C4092F400DAC0BE /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		305D5A962C4095F800DAC0BE /* ChartAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnnotationView.swift; sourceTree = "<group>"; };
 		307D81E52C20C25700B81607 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				307D81E82C20C8F900B81607 /* HealthKitManager.swift */,
+				3052BE8A2C487AB600ED93ED /* STError.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				3015D8102C23B05C00C364D5 /* MockData.swift in Sources */,
 				300DFFEF2C1A53DA00B8946E /* HealthKitSampleApp.swift in Sources */,
 				307D81ED2C221C9B00B81607 /* StepBarChart.swift in Sources */,
+				3052BE8B2C487AB600ED93ED /* STError.swift in Sources */,
 				307D81E92C20C8F900B81607 /* HealthKitManager.swift in Sources */,
 				305D5A952C4092F400DAC0BE /* ChartHelper.swift in Sources */,
 				307D81E62C20C25700B81607 /* HealthKitPermissionPrimingView.swift in Sources */,
