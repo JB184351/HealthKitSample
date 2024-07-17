@@ -23,10 +23,10 @@ struct WeightLineChart: View {
     }
     
     var body: some View {
-        let config = ChartContainerConfiguration(title: "Steps",
+        let config = ChartContainerConfiguration(title: "Weights",
                                                  symbol: "figure",
                                                  subtitle: "Avg: \(ChartHelper.averageValue(for: chartData))",
-                                                 context: .steps,
+                                                 context: .weight,
                                                  isNav: true)
         
         ChartContainer(config: config) {
