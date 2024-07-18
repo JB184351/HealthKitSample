@@ -14,6 +14,7 @@
 		3015D80D2C23AD4500C364D5 /* WeightLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015D80C2C23AD4500C364D5 /* WeightLineChart.swift */; };
 		3015D8102C23B05C00C364D5 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015D80F2C23B05C00C364D5 /* MockData.swift */; };
 		3015D8122C24EF9D00C364D5 /* WeightDiffBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3015D8112C24EF9D00C364D5 /* WeightDiffBarChart.swift */; };
+		30280ACD2C49CCDE008DEFD4 /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30280ACC2C49CCDE008DEFD4 /* Array+Ext.swift */; };
 		302B7DC02C3C89C40057F9B6 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B7DBF2C3C89C40057F9B6 /* ChartContainer.swift */; };
 		3052BE8B2C487AB600ED93ED /* STError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3052BE8A2C487AB600ED93ED /* STError.swift */; };
 		305D5A952C4092F400DAC0BE /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305D5A942C4092F400DAC0BE /* ChartHelper.swift */; };
@@ -40,6 +41,7 @@
 		3015D80C2C23AD4500C364D5 /* WeightLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLineChart.swift; sourceTree = "<group>"; };
 		3015D80F2C23B05C00C364D5 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		3015D8112C24EF9D00C364D5 /* WeightDiffBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDiffBarChart.swift; sourceTree = "<group>"; };
+		30280ACC2C49CCDE008DEFD4 /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		302B7DBF2C3C89C40057F9B6 /* ChartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
 		3052BE8A2C487AB600ED93ED /* STError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STError.swift; sourceTree = "<group>"; };
 		305D5A942C4092F400DAC0BE /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				307D81F72C223B8300B81607 /* DateExtension.swift */,
+				30280ACC2C49CCDE008DEFD4 /* Array+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				307D81EB2C2208AA00B81607 /* HealthMetric.swift in Sources */,
 				307D81FD2C223F5E00B81607 /* StepPieChart.swift in Sources */,
 				3015D80D2C23AD4500C364D5 /* WeightLineChart.swift in Sources */,
+				30280ACD2C49CCDE008DEFD4 /* Array+Ext.swift in Sources */,
 				307D81F52C223B0800B81607 /* ChartDataTypes.swift in Sources */,
 				30D7D32F2C39DA1D002D111B /* ChartEmptyView.swift in Sources */,
 			);

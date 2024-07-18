@@ -18,6 +18,10 @@ struct WeightLineChart: View {
         chartData.map { $0.value }.min() ?? 0
     }
     
+    var averageWeight: Double {
+        chartData.map { $0.value }.average
+    }
+    
     var selectedData: DateValueChartData? {
         ChartHelper.parseSelectedData(from: chartData, in: rawSelectedDate)
     }
@@ -25,7 +29,7 @@ struct WeightLineChart: View {
     var body: some View {
         let config = ChartContainerConfiguration(title: "Weights",
                                                  symbol: "figure",
-                                                 subtitle: "Avg: \(ChartHelper.averageValue(for: chartData))",
+                                                 subtitle: "Avg: \(averageWeight.formatted(.number.precision(.fractionLength(1)))) lbs",
                                                  context: .weight,
                                                  isNav: true)
         
