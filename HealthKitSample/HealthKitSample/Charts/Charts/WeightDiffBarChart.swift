@@ -19,13 +19,7 @@ struct WeightDiffBarChart: View {
     }
     
     var body: some View {
-        let config = ChartContainerConfiguration(title: "Weight",
-                                                 symbol: "figure",
-                                                 subtitle: "Per weekday (for the last 28 days)",
-                                                 context: .weight,
-                                                 isNav: false)
-        
-        ChartContainer(config: config) {
+        ChartContainer(chartType: .weightDiffBar) {
             if chartData.isEmpty {
                 ChartEmptyView(systemImageName: "chart.bar", title: "No Data", description: "There is no weight data from the Health App")
             } else {
@@ -68,5 +62,5 @@ struct WeightDiffBarChart: View {
 }
 
 #Preview {
-    WeightDiffBarChart(chartData: ChartMath.averageDailyWeightDiffs(for: []))
+    WeightDiffBarChart(chartData: ChartHelper.averageDailyWeightDiffs(for: []))
 }

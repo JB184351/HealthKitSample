@@ -27,13 +27,7 @@ struct WeightLineChart: View {
     }
     
     var body: some View {
-        let config = ChartContainerConfiguration(title: "Weights",
-                                                 symbol: "figure",
-                                                 subtitle: "Avg: \(averageWeight.formatted(.number.precision(.fractionLength(1)))) lbs",
-                                                 context: .weight,
-                                                 isNav: true)
-        
-        ChartContainer(config: config) {
+        ChartContainer(chartType: .weightLine(average: averageWeight)) {
             if chartData.isEmpty {
                 ChartEmptyView(systemImageName: "chart.xyaxis.line", title: "No Data", description: "There is no weight data from the Health App")
             } else {
