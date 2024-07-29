@@ -29,9 +29,13 @@ struct WeightDiffBarChart: View {
                     }
                     
                     ForEach(chartData) { weights in
-                        BarMark(x: .value("Date", weights.date, unit: .day), y: .value("Average Weight Change", weights.value))
-                            .foregroundStyle(weights.value < 0 ? Color.mint.gradient : Color.indigo.gradient)
+                        Plot {
+                            BarMark(x: .value("Date", weights.date, unit: .day), y: .value("Average Weight Change", weights.value))
+                                .foregroundStyle(weights.value < 0 ? Color.mint.gradient : Color.indigo.gradient)
                             .opacity(rawSelectedDate == nil || weights.date == selectedData?.date ? 1.0 : 0.3)
+                        }
+                        .accessibilityLabel(weights.date.accessibilityDate)
+                        .accessibilityValue("\(weights.value.formatted(.number.precision(.fractionLength(1)).sign(strategy: .always()))) pounds")
                     }
                 }
                 .frame(height: 150)
