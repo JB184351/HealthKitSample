@@ -35,7 +35,7 @@ struct StepPieChart: View {
                         .cornerRadius(6)
                         .opacity(selectedWeekday?.date.weekdayInt == weekday.date.weekdayInt ? 1.0 : 0.3)
                         .accessibilityLabel(weekday.date.accessibilityDate)
-                        .accessibilityValue("\(Int(steps.value)) step")
+                        .accessibilityValue("\(Int(weekday.value)) step")
                 }
             }
             .chartAngleSelection(value: $rawSelectedChartValue)
