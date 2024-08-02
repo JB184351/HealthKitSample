@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct HealthKitSampleApp: App {
+    
+    let hkManager = HealthKitManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DashboardView()
+                .environment(hkManager)
         }
     }
 }
