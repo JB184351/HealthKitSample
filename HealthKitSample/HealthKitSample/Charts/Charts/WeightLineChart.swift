@@ -18,18 +18,16 @@ struct WeightLineChart: View {
         chartData.map { $0.value }.min() ?? 0
     }
     
+    var averageWeight: Double {
+        chartData.map { $0.value }.average
+    }
+    
     var selectedData: DateValueChartData? {
         ChartHelper.parseSelectedData(from: chartData, in: rawSelectedDate)
     }
     
     var body: some View {
-        let config = ChartContainerConfiguration(title: "Steps",
-                                                 symbol: "figure",
-                                                 subtitle: "Avg: \(ChartHelper.averageValue(for: chartData))",
-                                                 context: .steps,
-                                                 isNav: true)
-        
-        ChartContainer(config: config) {
+        ChartContainer(chartType: .weightLine(average: averageWeight)) {
             if chartData.isEmpty {
                 ChartEmptyView(systemImageName: "chart.xyaxis.line", title: "No Data", description: "There is no weight data from the Health App")
             } else {
@@ -41,20 +39,26 @@ struct WeightLineChart: View {
                     RuleMark(y: .value("Goal", 155))
                         .foregroundStyle(.mint)
                         .lineStyle(.init(lineWidth: 1, dash: [5]))
+                        .accessibilityHidden(true)
                     
                     ForEach(chartData) { weight in
                         
-                        AreaMark(
-                            x: .value("Day", weight.date, unit: .day),
-                            yStart: .value("Value", weight.value),
-                            yEnd: .value("Min Value", minValue)
-                        )
-                        .foregroundStyle(Gradient(colors: [.indigo.opacity(0.5), .clear]))
+                        Plot {
+                            AreaMark(
+                                x: .value("Day", weight.date, unit: .day),
+                                yStart: .value("Value", weight.value),
+                                yEnd: .value("Min Value", minValue)
+                            )
+                            .foregroundStyle(Gradient(colors: [.indigo.opacity(0.5), .clear]))
+                            
+                            LineMark(x: .value("Day", weight.date, unit: .day), y: .value("Value", weight.value))
+                                .foregroundStyle(.indigo)
+                                .interpolationMethod(.catmullRom)
+                                .symbol(.circle)
+                        }
+                        .accessibilityLabel(weight.date.accessibilityDate)
+                        .accessibilityValue("\(weight.value.formatted(.number.precision(.fractionLength(1)))) pounds")
                         
-                        LineMark(x: .value("Day", weight.date, unit: .day), y: .value("Value", weight.value))
-                            .foregroundStyle(.indigo)
-                            .interpolationMethod(.catmullRom)
-                            .symbol(.circle)
                     }
                 }
                 .frame(height: 150)

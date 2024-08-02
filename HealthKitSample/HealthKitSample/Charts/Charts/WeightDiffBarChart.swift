@@ -19,13 +19,7 @@ struct WeightDiffBarChart: View {
     }
     
     var body: some View {
-        let config = ChartContainerConfiguration(title: "Weight",
-                                                 symbol: "figure",
-                                                 subtitle: "Per weekday (for the last 28 days)",
-                                                 context: .weight,
-                                                 isNav: false)
-        
-        ChartContainer(config: config) {
+        ChartContainer(chartType: .weightDiffBar) {
             if chartData.isEmpty {
                 ChartEmptyView(systemImageName: "chart.bar", title: "No Data", description: "There is no weight data from the Health App")
             } else {
@@ -35,9 +29,13 @@ struct WeightDiffBarChart: View {
                     }
                     
                     ForEach(chartData) { weights in
-                        BarMark(x: .value("Date", weights.date, unit: .day), y: .value("Average Weight Change", weights.value))
-                            .foregroundStyle(weights.value < 0 ? Color.mint.gradient : Color.indigo.gradient)
+                        Plot {
+                            BarMark(x: .value("Date", weights.date, unit: .day), y: .value("Average Weight Change", weights.value))
+                                .foregroundStyle(weights.value < 0 ? Color.mint.gradient : Color.indigo.gradient)
                             .opacity(rawSelectedDate == nil || weights.date == selectedData?.date ? 1.0 : 0.3)
+                        }
+                        .accessibilityLabel(weights.date.accessibilityDate)
+                        .accessibilityValue("\(weights.value.formatted(.number.precision(.fractionLength(1)).sign(strategy: .always()))) pounds")
                     }
                 }
                 .frame(height: 150)
@@ -68,5 +66,5 @@ struct WeightDiffBarChart: View {
 }
 
 #Preview {
-    WeightDiffBarChart(chartData: ChartMath.averageDailyWeightDiffs(for: []))
+    WeightDiffBarChart(chartData: ChartHelper.averageDailyWeightDiffs(for: []))
 }
